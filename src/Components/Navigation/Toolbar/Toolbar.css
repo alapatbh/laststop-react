@@ -1,0 +1,22 @@
+.Toolbar {
+  height: 8%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #6e81eb;
+  display: flex; /*To make the default alignment horizontal*/
+  justify-content: space-between; /*Flex box has this justify content property which defines how 
+  the elements which are wrapped by the tool bar items should be spread out 
+  space-between = the available space will be filled with the elements iside the tool bar elemnts and
+  automaticaly maintain some distance between them*/
+  align-items: center;
+  padding: 0 20px;
+  box-sizing: border-box;
+  z-index: 90;
+  color: white;
+}
+
+.Toolbar nav {
+  height: 100%;
+}
