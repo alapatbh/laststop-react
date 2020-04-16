@@ -5,7 +5,10 @@ import "./Courses.css";
 
 class Courses extends Component {
   state = {
-    courses: ["Java", "React"],
+    courses: [
+      { courseId: 1, courseName: "Java" },
+      { courseId: 2, courseName: "React" },
+    ],
     course: "",
   };
 
@@ -15,8 +18,12 @@ class Courses extends Component {
 
   addCourseHandler = () => {
     if (this.state.course !== "") {
-      let newCourse = this.state.courses.concat(this.state.course);
-      this.setState({ courses: newCourse, course: "" });
+      const newCourse = {
+        courseName: this.state.course,
+        courseId: Math.random(),
+      };
+      const newCoursesList = this.state.courses.concat(newCourse);
+      this.setState({ courses: newCoursesList, course: "" });
     }
   };
 
@@ -26,17 +33,17 @@ class Courses extends Component {
         {this.state.courses.map((course, index) => {
           return (
             <div
-              key={index}
+              key={course.courseId}
               className="eachCourseCss"
-              onClick={() => this.props.onAddCourse({ course })}
+              onClick={() => this.props.onAddCourse(course.courseId)}
             >
-              <Course courseName={course}></Course>
+              <Course courseName={course.courseName}></Course>
             </div>
           );
         })}
         <div className="eachCourseCss">
-          Add Course :{" "}
           <input
+            size="10"
             type="text"
             onChange={this.onChangeHandler}
             value={this.state.course}
@@ -64,7 +71,8 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    onAddCourse: (course) => dispatch({ type: "ADDCOURSE", value: course }),
+    onAddCourse: (course) =>
+      dispatch({ type: "SELECTEDCOURSE", value: course }),
   };
 };
 

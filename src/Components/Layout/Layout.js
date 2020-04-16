@@ -2,6 +2,8 @@ import React from "react";
 import Auxiliary from "../../Hoc/Auxiliary.js";
 import Toolbar from "../Navigation/Toolbar/Toolbar";
 import "./Layout.css";
+import Courses from "../../Container/Cources/Cources";
+import Chapters from "../../Container/Chapters/Chapters";
 
 const Layout = (props) => {
   return (
@@ -9,7 +11,14 @@ const Layout = (props) => {
       <div>
         <Toolbar />, Side drawer
       </div>
-      <main className="mainCss">{props.children}</main>
+      <div className="mainLayout">
+        <div className="leftLayout">left div</div>
+        <div className="centerLayout">
+          <Courses />
+          <Chapters />
+        </div>
+        <div className="rightLayout"></div>
+      </div>
     </Auxiliary>
   );
 };

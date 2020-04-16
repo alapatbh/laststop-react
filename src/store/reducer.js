@@ -1,12 +1,12 @@
 const intialState = {
-  courses: ["Java", "React", "C#"],
+  adminCourse: null,
 };
 
 const reducer = (state = intialState, action) => {
+  console.log(action);
   switch (action.type) {
-    case "ADDCOURSE":
-      console.log(action.value);
-      return state;
+    case "SELECTEDCOURSE":
+      return { ...state, adminCourse: action.value };
     default:
       return state;
   }

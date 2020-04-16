@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import "./App.css";
 import Auxiliary from "./Hoc/Auxiliary.js";
 import Layout from "./Components/Layout/Layout";
-import Courses from "./Container/Cources/Cources";
 
 class App extends Component {
   componentDidMount() {
@@ -12,9 +11,7 @@ class App extends Component {
   render() {
     return (
       <Auxiliary>
-        <Layout>
-          <Courses />
-        </Layout>
+        <Layout />
       </Auxiliary>
     );
   }

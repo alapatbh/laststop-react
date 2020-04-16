@@ -1,4 +1,29 @@
-.mainCss {
+.centerLayout {
+  width: 62%;
+  box-sizing: border-box;
+  align-self: flex-start;
+}
+
+.leftLayout {
+  border: 1px solid #cfcfcf;
+  border-radius: 2px;
+  width: 18%;
+  height: 250px;
+  box-shadow: 1px 1px 5px #f3f1f1;
+  align-self: flex-start;
+}
+
+.rightLayout {
+  width: 18%;
+  height: 350px;
+  align-self: flex-start;
+}
+
+.mainLayout {
+  width: 90%;
+  height: 100%;
+  margin: auto;
   margin-top: 42px;
-  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
 }
