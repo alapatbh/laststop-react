@@ -4,7 +4,7 @@
   position: fixed;
   top: 0;
   left: 0;
-  background-color: #6e81eb;
+  background-color: #3b4370;
   display: flex; /*To make the default alignment horizontal*/
   justify-content: space-between; /*Flex box has this justify content property which defines how 
   the elements which are wrapped by the tool bar items should be spread out 
@@ -19,4 +19,8 @@
 
 .Toolbar nav {
   height: 100%;
+}
+
+.ToolbarLogo {
+  margin-left: 10%;
 }

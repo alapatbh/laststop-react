@@ -1,14 +1,19 @@
 import React, { Component } from "react";
 import "./App.css";
-import Auxiliary from "./Hoc/Auxiliary/Auxiliary.js";
+import Auxiliary from "./Hoc/Auxiliary.js";
 import Layout from "./Components/Layout/Layout";
+import Courses from "./Container/Cources/Cources";
 
 class App extends Component {
+  componentDidMount() {
+    document.title = "Interview Adda";
+  }
+
   render() {
     return (
       <Auxiliary>
         <Layout>
-          <p>This is inside Layout!</p>
+          <Courses />
         </Layout>
       </Auxiliary>
     );

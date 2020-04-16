@@ -1,0 +1,29 @@
+.CoursesMap {
+  padding: 5px;
+  box-sizing: border-box;
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+.Coursesheading {
+  margin-left: 20px;
+}
+
+.CoursesCss {
+  border: 1px solid #e0e0e0;
+  width: 60%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 3px 3px 3px rgb(222, 222, 222);
+}
+.eachCourseCss {
+  margin: 5px;
+  border-radius: 7px;
+  padding: 5px;
+  box-sizing: border-box;
+  border: 1px solid #e0e0e0;
+}
