@@ -35,7 +35,7 @@ class Courses extends Component {
             <div
               key={course.courseId}
               className="eachCourseCss"
-              onClick={() => this.props.onAddCourse(course.courseId)}
+              onClick={() => this.props.onAddCourse(course)}
             >
               <Course courseName={course.courseName}></Course>
             </div>
