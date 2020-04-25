@@ -8,3 +8,18 @@
   box-shadow: 3px 3px 3px rgb(222, 222, 222);
   border-radius: 5px;
 }
+
+.innerTopicsDiv {
+  display: flex;
+  flex-flow: row wrap;
+  box-sizing: border-box;
+  margin: 6px;
+}
+
+.eachChapter {
+  padding: 5px;
+  box-sizing: border-box;
+  border: 1px solid #e0e0e0;
+  border-radius: 5px;
+  margin: 3px;
+}
