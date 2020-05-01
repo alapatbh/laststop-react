@@ -1,0 +1,84 @@
+.QuesAndAnsCss {
+  background-color: white;
+  border: 1px solid #e0e0e0;
+  width: 100%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  box-shadow: 3px 3px 3px rgb(222, 222, 222);
+}
+
+.QuesMap {
+  margin: 2px;
+  margin-top: 3px;
+  margin-bottom: 5px;
+}
+
+.QuestionCss {
+  width: 99%;
+  padding: 5px;
+  padding-left: 10px;
+  box-sizing: border-box;
+  margin: 5px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-evenly; */
+  border: 1px solid #e0e0e0;
+  box-shadow: 2px 2px 2px rgb(222, 222, 222);
+}
+
+.QuestionDataCss {
+  /* border: 1px solid #e0e0e0; */
+  justify-self: center;
+  border-radius: 5px;
+  /* padding: 5px; */
+  box-sizing: border-box;
+  display: flex;
+  width: 100%;
+}
+.QuestionInnerCss {
+  display: flex;
+}
+
+.answerCss {
+  margin: 5px;
+  border-top: 1px solid #e0e0e0;
+  padding: 10px;
+  box-sizing: border-box;
+  font-size: 12px;
+}
+
+.IndexCss {
+  justify-self: left;
+  padding: 5px;
+  width: 10%;
+}
+
+.difficultyMediumCss {
+  background-color: rgb(253, 202, 108);
+  border-radius: 5px;
+  text-align: center;
+  padding: 5px;
+  width: 8%;
+}
+.difficultyHardCss {
+  background-color: rgb(255, 115, 115);
+  border-radius: 5px;
+  text-align: center;
+  padding: 5px;
+  width: 8%;
+}
+.difficultyEasyCss {
+  background-color: rgb(127, 243, 127);
+  border-radius: 5px;
+  text-align: center;
+  padding: 5px;
+  width: 8%;
+}
+
+.quesHeading {
+  padding: 5px;
+}

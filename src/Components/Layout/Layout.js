@@ -5,6 +5,7 @@ import "./Layout.css";
 import Courses from "../../Container/Cources/Cources";
 import Chapters from "../../Container/Chapters/Chapters";
 import Topics from "../../Container/Topics/Topics";
+import QuestionAndAnswer from "../../Container/QuestionAndAnswer/QuestionAndAnswer";
 
 const Layout = (props) => {
   return (
@@ -25,6 +26,9 @@ const Layout = (props) => {
             <div className="eachCenterDiv">
               <Topics />
             </div>
+          </div>
+          <div className="eachCenterDiv">
+            <QuestionAndAnswer />
           </div>
         </div>
         <div className="rightLayout"></div>
