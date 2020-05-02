@@ -14,7 +14,9 @@ const Question = (props) => {
   }
   return (
     <Auxiliary>
-      <div className="questionWithDifficulty">{props.quesData}</div>
+      <div className="questionWithDifficulty" onClick={props.clickedQuestion}>
+        {props.quesData}
+      </div>
       <div className={difficultyClass}>{difficulty}</div>
     </Auxiliary>
   );

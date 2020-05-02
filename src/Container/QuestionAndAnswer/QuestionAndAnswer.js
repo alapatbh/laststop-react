@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import "./QuestionAndAnswer.css";
-import Question from "./Question/Question";
+import EachQuesAndAns from "./EachQuesAndAns/EachQuesAndAns";
+import Auxiliary from "../../Hoc/Auxiliary";
 
 class QuestionAndAnswer extends Component {
   state = {
@@ -18,6 +19,13 @@ class QuestionAndAnswer extends Component {
         difficulty: "h",
         topicId: 1,
       },
+      {
+        questionId: 2,
+        question: "What are different ways to create String Object?",
+        answer: 'String str = new String("abc");    String str1 = "abc";',
+        difficulty: "m",
+        topicId: 1,
+      },
     ];
     this.setState({ listQuesAndAns: QuestionAndAnswerList });
   }
@@ -30,24 +38,19 @@ class QuestionAndAnswer extends Component {
       );
       const quesMap = questionsRelatedToTopic.map((eachQues, index) => {
         return (
-          <div className="QuestionCss" key={eachQues.questionId}>
-            <div className="QuestionInnerCss">
-              <div className="QuestionDataCss">
-                <Question
-                  quesData={eachQues.question}
-                  difficulty={eachQues.difficulty}
-                  // OnclicKQuestion={}
-                />
-              </div>
-            </div>
-            <div className="answerCss">{eachQues.answer}</div>
-          </div>
+          <Auxiliary key={eachQues.questionId}>
+            <EachQuesAndAns
+              quesData={eachQues.question}
+              difficulty={eachQues.difficulty}
+              answer={eachQues.answer}
+            />
+          </Auxiliary>
         );
       });
       QuesAndAnsBody = (
         <div className="QuesAndAnsCss">
           <div className="quesHeading">
-            <b>Questions from {this.props.storedTopic.topicName}</b>
+            <b>Questions in {this.props.storedTopic.topicName}</b>
           </div>
           <div className="QuesMap">{quesMap}</div>
         </div>

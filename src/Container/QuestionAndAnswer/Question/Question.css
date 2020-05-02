@@ -3,3 +3,7 @@
   padding: 5px;
   box-sizing: border-box;
 }
+
+.questionWithDifficulty:hover {
+  cursor: pointer;
+}
