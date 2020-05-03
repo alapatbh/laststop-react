@@ -10,20 +10,24 @@ class QuestionAndAnswer extends Component {
     inputQuestion: "",
     inputAnswer: "",
     inputDifficulty: "",
+    validation: true,
   };
 
   handleInputChange(event) {
     const target = event.target;
     const value = target.value;
     const name = target.name;
-
+    if (name === "inputQuestion" && value !== "") {
+      this.setState({ validation: false });
+    } else {
+      this.setState({ validation: true });
+    }
     this.setState({
       [name]: value,
     });
   }
 
   addQuestionHandler = () => {
-    console.log("[QuestionAnsAnswer.js] -> addQuestionHandler");
     const newQuesAndAns = {
       questionId: Math.random(),
       question: this.state.inputQuestion,
@@ -32,7 +36,7 @@ class QuestionAndAnswer extends Component {
       topicId: this.props.storedTopic.topicId,
     };
     const changedList = [...this.state.listQuesAndAns, newQuesAndAns];
-    console.log("[QuestionAnsAnswer.js] -> " + changedList);
+
     this.setState({
       listQuesAndAns: changedList,
       inputQuestion: "",
@@ -55,6 +59,7 @@ class QuestionAndAnswer extends Component {
   }
 
   render() {
+    console.log(this.state.validation);
     let QuesAndAnsBody = <div></div>;
     if (this.props.storedTopic) {
       const questionsRelatedToTopic = this.state.listQuesAndAns.filter(
@@ -112,7 +117,12 @@ class QuestionAndAnswer extends Component {
                     />
                   </td>
                   <td>
-                    <button onClick={this.addQuestionHandler}>Save</button>
+                    <button
+                      disabled={this.state.validation}
+                      onClick={this.addQuestionHandler}
+                    >
+                      Save
+                    </button>
                   </td>
                 </tr>
               </tbody>

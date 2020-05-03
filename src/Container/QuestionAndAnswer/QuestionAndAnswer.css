@@ -94,3 +94,9 @@ textarea {
   background-color: #596aca;
   color: white;
 }
+
+.quesAnsTable button:disabled {
+  background-color: #dddd;
+  color: grey;
+  border: 2px solid grey;
+}
