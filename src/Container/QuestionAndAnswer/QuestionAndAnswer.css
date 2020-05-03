@@ -10,9 +10,18 @@
   box-shadow: 3px 3px 3px rgb(222, 222, 222);
 }
 
+.quesAnsTable {
+  /* border: 1px solid grey; */
+  text-align: left;
+  width: 99%;
+  margin-left: auto;
+  padding: 5px;
+  box-sizing: border-box;
+}
+
 .QuesMap {
   margin: 2px;
-  margin-top: 3px;
+  /* margin-top: 1px; */
   margin-bottom: 5px;
 }
 
@@ -46,4 +55,42 @@
 
 .quesHeading {
   padding: 5px;
+}
+
+.quesAnsTable .headingTd {
+  width: 10%;
+}
+
+.quesAnsTable .mainTd {
+  width: 80%;
+}
+
+.quesAnsTable .rightTd {
+  width: 10%;
+}
+
+.quesAnsTable input[type="text"],
+select,
+textarea {
+  width: 100%;
+  padding: 2px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.quesAnsTable button {
+  width: 100%;
+  border: 2px solid #5f71da;
+  color: #5f71da;
+  font-weight: bold;
+  padding: 10px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.quesAnsTable button:hover {
+  background-color: #596aca;
+  color: white;
 }
