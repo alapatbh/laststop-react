@@ -17,9 +17,13 @@
   align-items: center;
 }
 
-.NavigationItem a:hover,
-.NavigationItem a:active,
-.NavigationItem a.active {
+.NavigationItem:hover,
+.NavigationItem:active {
+  background-color: #8f78db;
+  border-bottom: 4px solid #e7e4f0;
+}
+
+.NavActiveItem {
   background-color: #8f78db;
   border-bottom: 4px solid #e7e4f0;
 }

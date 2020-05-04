@@ -2,10 +2,9 @@ import React from "react";
 import Auxiliary from "../../Hoc/Auxiliary.js";
 import Toolbar from "../Navigation/Toolbar/Toolbar";
 import "./Layout.css";
-import Courses from "../../Container/Cources/Cources";
-import Chapters from "../../Container/Chapters/Chapters";
-import Topics from "../../Container/Topics/Topics";
-import QuestionAndAnswer from "../../Container/QuestionAndAnswer/QuestionAndAnswer";
+import Dashboard from "../Dashboard/Dashboard";
+import Discussions from "../Discussions/Discussions";
+import { Route, Switch } from "react-router-dom";
 
 const Layout = (props) => {
   return (
@@ -15,22 +14,10 @@ const Layout = (props) => {
       </div>
       <div className="mainLayout">
         <div className="leftLayout"></div>
-        <div className="centerLayout">
-          <div className="eachCenterDiv">
-            <Courses />
-          </div>
-          <div className="coursesAndTopicsDiv">
-            <div className="eachCenterDiv">
-              <Chapters />
-            </div>
-            <div className="eachCenterDiv">
-              <Topics />
-            </div>
-          </div>
-          <div className="eachCenterDiv">
-            <QuestionAndAnswer />
-          </div>
-        </div>
+        <Switch>
+          <Route path="/" exact component={Dashboard} />
+          <Route path="/discussions" exact component={Discussions} />
+        </Switch>
         <div className="rightLayout"></div>
       </div>
     </Auxiliary>

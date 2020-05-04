@@ -6,7 +6,7 @@ const NavigationItems = () => {
   return (
     <ul className="NavigationItems">
       <NavigationItem link="/">Dashboard</NavigationItem>
-      <NavigationItem link="/">Discuss</NavigationItem>
+      <NavigationItem link="/discussions">Discuss</NavigationItem>
     </ul>
   );
 };
